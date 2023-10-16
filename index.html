@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>STD RIAV</title>
+  <style>
+    .image-container {
+      text-align: center;
+    }
+    .image-container img {
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+  <script>
+    function cambiarImagen(numero) {
+      var imagen = document.getElementById('imagen' + numero);
+      imagen.style.display = 'block';
+
+      // Realiza un scroll al principio de la página
+      window.scrollTo(0, 0);
+
+      // Oculta la primera imagen si no es la imagen 2
+      if (numero === 2) {
+        document.getElementById('imagen1').style.display = 'none';
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="image-container">
+    <img id="imagen1" src="img/STD_imgArtboard 2-8.png" alt="Imagen 1" style="cursor: pointer;" onclick="cambiarImagen(2);">
+    <a href="https://forms.gle/zGsKEKfL2fyAE5of7" target="_blank">
+      <img id="imagen2" src="img/STD_imgArtboard 1-8.png" alt="Imagen 2" style="cursor: pointer; display: none;" onclick="cambiarImagen(3);">
+    </a>
+  </div>
+</body>
+</html>
